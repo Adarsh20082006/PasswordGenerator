@@ -1,23 +1,42 @@
-body{display: flex;
-justify-content: center;
-flex-direction:column;
-align-items: center;
+body{display: grid;
+    place-items: center;
 height: 600px;
 width: auto;
-background-color: #bd0404;
-color: #efc64aab;
+margin:auto;
+background-color: rgb(249, 246, 246);
+color: #040b20ab;
 }
-label{
-    margin-right: 150px;
-    font-size: 20px;
+.main{
+    display:flex;
+    border: 1px solid;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 30px;
+    background: rgba(230, 229, 229, 0.64);
+    border-radius: 15px;
 }
+
 h1{
     display: inline-flex;
+    font-size: 30px;
+}
+label{
+    font-size: large;
 }
  #text{
-    background-color: #5a823f;
+    background-color: #deec94;
     width: 200px;
-    height: 20px;
+    height: 40px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: large;
+    border: none;
+    position: relative;
+}
+.image{
+    position: relative;
+    bottom: 30px;
+    left:80px;
 }
 ::placeholder{
     color: hsl(0, 19%, 24%);
@@ -25,7 +44,14 @@ h1{
     font-size: 15px;
     padding-left: 10px;
 }
+select{
+    height: 20px;
+    border-radius: 5px;
+    background: rgb(230, 212, 212);
+}
 #submit{
-    margin-top: 15px;
-    background-color: rgb(97, 145, 26);
+    
+    background-color: rgb(36, 203, 170);
+    border-radius: 5px;
+    height: 30px;
 }
