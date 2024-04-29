@@ -6,18 +6,28 @@
     <title>Demo</title>
     <link rel="stylesheet" href="demo2.css">
 </head>
-<body>
+<body><section class="main">
    <h1>Password generator:</h1>
-   <label >Enter Password:</label><br>
-   <input id="text" type="text" placeholder="Password">
-   <input id="submit" type="submit" value="Generate" onclick="generate()">
-
+   <div>
+   <label for="length">Password length: </label>
+   <select name="length" id="length">
+    <option value="4">4</option>
+    <option value="6" selected>6</option>
+    <option value="8">8</option>
+    <option value="10">10</option>
+   </select>
+  
+   </div><br>
+   <input id="submit" type="submit" value="Generate" onclick="generate()"><br>
+   <input id="text" type="text" placeholder="Generated password"><img class="image" src="copy.png" width="20"><br>
+   
+</section>
 
 <script>
     function randPassword(length){
-        const smallAlpha="qwertyuioplkjhgfdMNBVCXZGFDS!@#$%^&*_/|<>AHJKLPOIUYQWERTsaz1234567890xcvbnm";
+        const smallAlpha="qwertyuioplkjhgfdMNBVCXZGFDS1234567890;:'|\?`~!@#$%^&*_/|<>AHJKLPOIUYQWERTsaz1234567890xcvbnm";
         let password='';
-   for(let x=0;x<length;x++){
+   for(let x=0; x<length; x++){
    let k= Math.floor(Math.random()*smallAlpha.length);
     password +=smallAlpha[k];
    }
@@ -25,11 +35,17 @@
     }
   
     let input=document.getElementById('text');
-    input.value=randPassword(8);
+    input.value=randPassword(document.getElementById("length").value);
     function generate(){
-     input.value=randPassword(8);
-    }
+     input.value=randPassword(document.getElementById("length").value);
+     document.querySelector(".image").src="copy.png";
 
+    }
+    document.querySelector(".image").addEventListener("click",()=>{
+        navigator.clipboard.writeText(input.value);
+        document.querySelector(".image").src="check.png";
+    })
+   
 
 </script></body>
 </html>
