@@ -1,0 +1,31 @@
+body{display: flex;
+justify-content: center;
+flex-direction:column;
+align-items: center;
+height: 600px;
+width: auto;
+background-color: #bd0404;
+color: #efc64aab;
+}
+label{
+    margin-right: 150px;
+    font-size: 20px;
+}
+h1{
+    display: inline-flex;
+}
+ #text{
+    background-color: #5a823f;
+    width: 200px;
+    height: 20px;
+}
+::placeholder{
+    color: hsl(0, 19%, 24%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding-left: 10px;
+}
+#submit{
+    margin-top: 15px;
+    background-color: rgb(97, 145, 26);
+}

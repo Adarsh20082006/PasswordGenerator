@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="demo2.css">
+</head>
+<body>
+   <h1>Password generator:</h1>
+   <label >Enter Password:</label><br>
+   <input id="text" type="text" placeholder="Password">
+   <input id="submit" type="submit" value="Generate" onclick="generate()">
+
+
+<script>
+    function randPassword(length){
+        const smallAlpha="qwertyuioplkjhgfdMNBVCXZGFDS!@#$%^&*_/|<>AHJKLPOIUYQWERTsaz1234567890xcvbnm";
+        let password='';
+   for(let x=0;x<length;x++){
+   let k= Math.floor(Math.random()*smallAlpha.length);
+    password +=smallAlpha[k];
+   }
+   return password;
+    }
+  
+    let input=document.getElementById('text');
+    input.value=randPassword(8);
+    function generate(){
+     input.value=randPassword(8);
+    }
+
+
+</script></body>
+</html>
