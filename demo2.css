@@ -1,9 +1,11 @@
-body{display: grid;
-    place-items: center;
-height: 600px;
+body{display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+height: 100vh;
 width: auto;
 margin:auto;
-background-color: rgb(249, 246, 246);
+background: linear-gradient(purple,yellow,green);
 color: #040b20ab;
 }
 .main{
@@ -12,8 +14,9 @@ color: #040b20ab;
     flex-direction: column;
     align-items: center;
     padding: 10px 30px;
-    background: rgba(230, 229, 229, 0.64);
+    background: rgba(11, 125, 163, 0.64);
     border-radius: 15px;
+    position: relative;
 }
 
 h1{
@@ -24,7 +27,7 @@ label{
     font-size: large;
 }
  #text{
-    background-color: #deec94;
+    background-color: #daf550;
     width: 200px;
     height: 40px;
     border-radius: 25px;
@@ -54,4 +57,15 @@ select{
     background-color: rgb(36, 203, 170);
     border-radius: 5px;
     height: 30px;
+}
+a{
+    position: relative;
+    bottom:170px;
+    left:110px;
+}
+ [type='button']{
+    border: none;
+    background-color: chocolate;
+    height: 22px;
+    border-radius: 5px;
 }
